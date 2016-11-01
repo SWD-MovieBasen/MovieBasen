@@ -1,0 +1,60 @@
+﻿@model MovieBasen.Models.Movie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Movie</h4>
+    <hr />
+
+    @if (Model.MovieImagePath == null)
+    {
+        <img src="http://placehold.it/200x200" alt="Profile image" />
+    }
+    else
+    {
+        <img src="@Model.MovieImagePath" alt="Profile image" />
+    }
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MoviesGenres.FirstOrDefault().Genre)
+        </dt>
+        &ensp;
+        @foreach (var item in Model.MoviesGenres)
+        {
+            <td>
+                &nbsp; @Html.DisplayFor(modelItem => item.Genre.Name),  
+            </td>
+        }
+
+
+    </dl>
+</div>
+
+<p></p>
+
+@Html.ActionLink("Tilføj Genre", "CreateGenretoMovie", new { movieID = Model.ID }, new { @class = "giveJob_btn btn btn-group col-md-offset-7" })
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
