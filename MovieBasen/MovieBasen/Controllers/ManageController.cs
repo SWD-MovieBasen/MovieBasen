@@ -50,6 +50,24 @@ namespace MovieBasen.Controllers
             }
         }
 
+
+        //Gør det mugligt at tilføje et billede til en User
+        public async Task<ActionResult> SaveImage(IndexViewModel model, HttpPostedFileBase image)
+        {
+            if (ModelState.IsValid)
+            {
+                if (image != null)
+                {
+                    model.SaveImage(image, Server.MapPath("~"), "/ProfileImages/");
+                    ApplicationUser user = UserManager.FindById(User.Identity.GetUserId());
+                    user.ProfileImagePath = model.ProfileImagePath;
+                    IdentityResult result = await UserManager.UpdateAsync(user);
+                }
+                return RedirectToAction("Index", "Manage");
+            }
+            return View("Index");
+        }
+
         //
         // GET: /Manage/Index
         public async Task<ActionResult> Index(ManageMessageId? message)
@@ -63,14 +81,22 @@ namespace MovieBasen.Controllers
                 : message == ManageMessageId.RemovePhoneSuccess ? "Your phone number was removed."
                 : "";
 
+            // Finder user'en og tilføje ham til view'et
             var userId = User.Identity.GetUserId();
+            var user = await UserManager.FindByIdAsync(userId);
+
+        
             var model = new IndexViewModel
             {
                 HasPassword = HasPassword(),
                 PhoneNumber = await UserManager.GetPhoneNumberAsync(userId),
                 TwoFactor = await UserManager.GetTwoFactorEnabledAsync(userId),
                 Logins = await UserManager.GetLoginsAsync(userId),
-                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
+                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId),
+                Name = user.Name,
+                Number = user.PhoneNumber,
+                Email = user.Email,
+                ProfileImagePath = user.ProfileImagePath
             };
             return View(model);
         }

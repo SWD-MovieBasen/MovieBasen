@@ -19,7 +19,7 @@
         <img src="@Model.MovieImagePath" alt="Profile image" />
     }
 
-    <dl class="dl-horizontal">
+    <dl class="dl-horizontal-SubDetails col-md-offset-1">
         <dt>
             @Html.DisplayNameFor(model => model.Name)
         </dt>
@@ -42,9 +42,9 @@
         &ensp;
         @foreach (var item in Model.MoviesGenres)
         {
-            <td>
-                &nbsp; @Html.DisplayFor(modelItem => item.Genre.Name),  
-            </td>
+            <mydt>
+                &nbsp; @Html.DisplayFor(modelItem => item.Genre.Name),
+            </mydt>
         }
 
 

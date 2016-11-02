@@ -133,6 +133,6 @@ C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieB
 C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasen\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasen\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasen\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasen\obj\Debug\MovieBasen.csprojResolveAssemblyReference.cache
 C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasen\obj\Debug\MovieBasen.dll
 C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasen\obj\Debug\MovieBasen.pdb
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasen\obj\Debug\MovieBasen.csprojResolveAssemblyReference.cache
