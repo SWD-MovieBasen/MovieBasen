@@ -29,6 +29,7 @@ namespace MovieBasen.Models
 
         public virtual ICollection<MovieGenre> MoviesGenres { get; set; }
 
+        //..test...
         public String Description { get; set; }
 
     }
