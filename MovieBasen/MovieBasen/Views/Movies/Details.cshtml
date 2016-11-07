@@ -4,10 +4,10 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Movie Details</h2>
 
 <div>
-    <h4>Movie</h4>
+    <h4> @Html.DisplayFor(model => model.Name)</h4>
     <hr />
 
     @if (Model.MovieImagePath == null)
@@ -18,16 +18,14 @@
     {
         <img src="@Model.MovieImagePath" alt="Profile image" />
     }
+    <p>
+        <dd>
+            @Html.DisplayFor(model => model.Synopsis)
+        </dd>
+    </p>
+
 
     <dl class="dl-horizontal-SubDetails col-md-offset-1">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Year)
         </dt>
@@ -39,21 +37,37 @@
         <dt>
             @Html.DisplayNameFor(model => model.MoviesGenres.FirstOrDefault().Genre)
         </dt>
-        &ensp;
-        @foreach (var item in Model.MoviesGenres)
-        {
-            <mydt>
-                &nbsp; @Html.DisplayFor(modelItem => item.Genre.Name),
-            </mydt>
-        }
+        <dd>
+            &ensp;
+            @foreach (var item in Model.MoviesGenres)
+            {
+                <mydt>
+                    &nbsp; @Html.DisplayFor(modelItem => item.Genre.Name),
+                </mydt>
+            }
+        </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.MoviesActors.FirstOrDefault().Actor)
+        </dt>
 
+        <dd>
+            &ensp;
+            @foreach (var item in Model.MoviesActors)
+            {
+                <mydt>
+                    &nbsp; @Html.DisplayFor(modelItem => item.Actor.FullName),
+                </mydt>
+            }
+        </dd>
     </dl>
 </div>
 
-<p></p>
+<p>
+    @Html.ActionLink("Tilføj Genre", "CreateGenretoMovie", new { movieID = Model.ID }, new { @class = "giveJob_btn btn btn-group col-md-offset-7" }) |
+    @Html.ActionLink("Tilføj Actor", "CreateActortoMovie", new { movieID = Model.ID }, new { @class = "giveJob_btn btn btn-group col-md-offset-8" })
+</p>
 
-@Html.ActionLink("Tilføj Genre", "CreateGenretoMovie", new { movieID = Model.ID }, new { @class = "giveJob_btn btn btn-group col-md-offset-7" })
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
     @Html.ActionLink("Back to List", "Index")

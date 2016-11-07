@@ -95,20 +95,20 @@ h1, h2, h3 {
 }
 
     .dl-horizontal-SubDetails dd {
-        margin-left: -20px;
+        margin-left: -30px;
         line-height: 1.5;
     }
 
         .dl-horizontal-SubDetails mydt {
-        margin-left: -38px;
+        margin-left: -18px;
         line-height: 1.5;
-        margin-right: 35px;
+        margin-right: 16px;
 
 
     }
 
     .dl-horizontal-SubDetails dt {
-        margin-left: -80px;
+        margin-left: -100px;
         float: left;
       /*  width: 110px;  */
         overflow: hidden;

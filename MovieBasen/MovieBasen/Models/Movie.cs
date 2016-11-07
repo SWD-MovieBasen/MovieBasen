@@ -14,6 +14,8 @@ namespace MovieBasen.Models
 
         public String Year { get; set; }
 
+        public String Synopsis { get; set; }
+
         public String MovieImagePath { get; set; }
 
         public void SaveImage(HttpPostedFileBase image, String serverPath, String pathToFile)
@@ -29,8 +31,7 @@ namespace MovieBasen.Models
 
         public virtual ICollection<MovieGenre> MoviesGenres { get; set; }
 
-        //..test...
-        public String Description { get; set; }
+        public virtual ICollection<MovieActor> MoviesActors { get; set; }
 
     }
 

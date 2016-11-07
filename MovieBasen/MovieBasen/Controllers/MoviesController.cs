@@ -82,8 +82,10 @@ namespace MovieBasen.Controllers
         {
             if (ModelState.IsValid)
             {
+                // Rediger den valgte Movie
                 db.Entry(movie).State = EntityState.Modified;
                 movie.SaveImage(image, Server.MapPath("~"), "/MovieImages/");
+
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -118,7 +120,7 @@ namespace MovieBasen.Controllers
 
 
 
-        //------------- Create Genre to Movie - Start-----------------------------------------------------------------------------------------------------------------------------------------------
+        //------------- Create Genre to a Movie - Start-----------------------------------------------------------------------------------------------------------------------------------------------
 
 
         // GET: MovieGenre/Create
@@ -158,7 +160,52 @@ namespace MovieBasen.Controllers
         }
 
 
-        //------------- Create Genre to Movie - Done-----------------------------------------------------------------------------------------------------------------------------------------------
+        //------------- Create Genre to a Movie - Done-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+        //------------- Create Actor to a Movie - Start-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+        // GET: MovieActor/Create
+        public ActionResult CreateActorToMovie(int? actorID)
+        {
+            ViewBag.MovieID = db.Movies.Find(actorID);
+            ViewBag.ActorID = new SelectList(db.Actors, "ID", "FullName");
+            return View();
+        }
+
+        // POST: MovieActor/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateActorToMovie(MovieActor movieActor)
+        {
+            if (ModelState.IsValid)
+            {
+                db.MoviesActors.Add(movieActor);
+
+                // Validering/Tjekker om der allerede eksister et actor til den valgte Movie 
+                var movieActorValidation = db.MoviesActors.Where(s => s.MovieID == movieActor.MovieID && s.ActorID == movieActor.ActorID).FirstOrDefault();
+
+                if (movieActorValidation == null)
+                {
+                    db.SaveChanges();
+                    return RedirectToAction("Details/" + movieActor.MovieID);
+                }
+                else
+                {
+                    ModelState.AddModelError("", "That Actor exist already in the Movie");
+                }
+
+            }
+
+            ViewBag.ActorID = new SelectList(db.Actors, "ID", "FullName", movieActor.ActorID);
+            return View(movieActor);
+        }
+
+
+        //------------- Create Actor to a Movie - Done-----------------------------------------------------------------------------------------------------------------------------------------------
 
     }
 }

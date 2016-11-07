@@ -28,7 +28,9 @@ namespace MovieBasen.Models
     {
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Genre> Genres { get; set; }
+        public DbSet<Actor> Actors { get; set; }
 
+        public DbSet<MovieActor> MoviesActors { get; set; }
         public DbSet<MovieGenre> MoviesGenres { get; set; }
 
 

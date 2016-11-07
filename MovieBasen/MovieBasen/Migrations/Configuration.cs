@@ -10,7 +10,6 @@ namespace MovieBasen.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            ContextKey = "MovieBasen.Models.ApplicationDbContext";
         }
 
         protected override void Seed(MovieBasen.Models.ApplicationDbContext context)
