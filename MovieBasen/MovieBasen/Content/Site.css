@@ -27,22 +27,21 @@ h1, h2, h3 {
     padding-bottom: 25px;
 }
 
- h4, h5, h6 {
+h4, h5, h6 {
     padding-bottom: 0px;
 }
 
- h5 {
-      color: #606060;   
-      padding-block-start: 1.8px; 
- }
+h5 {
+    color: #606060;
+    padding-block-start: 1.8px;
+}
 
 .container body-content {
     padding-bottom: 50px;
 }
 
 .col-lg-pull-0 {
-    right: 2.7%;
-    
+    right: 37.7%;
 }
 
 
@@ -84,7 +83,15 @@ h1, h2, h3 {
     top: 6px;
 }
 
+.searchBar {
+    padding-top: 13px;
+}
 
+.glyphicon-search {
+    right: 25px;
+    font-size: 15px;
+    top: 2.5px;
+}
 
 
 /* Gør Labelet StartTid og SlutTid aligner */
@@ -110,18 +117,16 @@ h1, h2, h3 {
         line-height: 1.5;
     }
 
-        .dl-horizontal-SubDetails mydt {
+    .dl-horizontal-SubDetails mydt {
         margin-left: -18px;
         line-height: 1.5;
         margin-right: 16px;
-
-
     }
 
     .dl-horizontal-SubDetails dt {
         margin-left: -95px;
         float: left;
-      /*  width: 110px;  */
+        /*  width: 110px;  */
         overflow: hidden;
         clear: left;
         text-align: left;

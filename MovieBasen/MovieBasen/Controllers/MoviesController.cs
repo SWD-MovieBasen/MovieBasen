@@ -15,9 +15,18 @@ namespace MovieBasen.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Movies
-        public ActionResult Index()
+        public ActionResult Index(String searchString)
         {
-            return View(db.Movies.ToList());
+
+            var movies = from m in db.Movies
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                movies = db.Movies.Where(s => s.Name.Contains(searchString));
+            }
+
+            return View(movies.ToList());
         }
 
         // GET: Movies/Details/5
