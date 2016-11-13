@@ -40,8 +40,14 @@ h5 {
     padding-bottom: 50px;
 }
 
-.col-lg-pull-0 {
-    right: 37.7%;
+/* Fix Movie Name and year in movieDetail  */
+.coolContainerTitel  {
+    float: left;
+    padding-left: 14px;
+}
+.coolContainerYear  {
+    float: left;
+    padding-left: 10px;
 }
 
 
