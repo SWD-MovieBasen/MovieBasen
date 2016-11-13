@@ -32,8 +32,8 @@ h1, h2, h3 {
 }
 
  h5 {
-      color: #404040;   
-      padding-block-start: 1.7px; 
+      color: #606060;   
+      padding-block-start: 1.8px; 
  }
 
 .container body-content {
@@ -52,7 +52,7 @@ h1, h2, h3 {
     border-radius: 6px;
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 5px;
+    padding-top: 10px;
     padding-bottom: 1px;
 }
 
