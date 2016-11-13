@@ -24,14 +24,25 @@ textarea {
 }
 
 h1, h2, h3 {
-    padding-bottom: 30px;
+    padding-bottom: 25px;
 }
 
  h4, h5, h6 {
     padding-bottom: 0px;
 }
+
+ h5 {
+      color: #404040;   
+      padding-block-start: 1.7px; 
+ }
+
 .container body-content {
     padding-bottom: 50px;
+}
+
+.col-lg-pull-0 {
+    right: 2.7%;
+    
 }
 
 
@@ -95,7 +106,7 @@ h1, h2, h3 {
 }
 
     .dl-horizontal-SubDetails dd {
-        margin-left: -30px;
+        margin-left: -43px;
         line-height: 1.5;
     }
 
@@ -108,7 +119,7 @@ h1, h2, h3 {
     }
 
     .dl-horizontal-SubDetails dt {
-        margin-left: -100px;
+        margin-left: -95px;
         float: left;
       /*  width: 110px;  */
         overflow: hidden;

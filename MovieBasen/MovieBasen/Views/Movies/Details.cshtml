@@ -6,10 +6,11 @@
 
 <h2>Movie Details</h2>
 
-<div>
-    <h4> @Html.DisplayFor(model => model.Name)</h4>
-    <hr />
+<h4 class="col-lg-1"> @Html.DisplayFor(model => model.Name)</h4>
+<h5 class="col-lg-11 col-lg-pull-0"> (@Html.DisplayFor(model => model.Year)) </h5>
+<hr />
 
+<div class="col-lg-12 col-lg-1">
     @if (Model.MovieImagePath == null)
     {
         <img src="http://placehold.it/200x200" alt="Profile image" />
@@ -18,25 +19,19 @@
     {
         <img src="@Model.MovieImagePath" alt="Profile image" />
     }
-    <p>
-        <dd>
-            @Html.DisplayFor(model => model.Synopsis)
-        </dd>
-    </p>
+</div>
+
+    <div class="col-lg-12 ">
+        @Html.DisplayFor(model => model.Synopsis)
+    </div>
 
 
-    <dl class="dl-horizontal-SubDetails col-md-offset-1">
-        <dt>
-            @Html.DisplayNameFor(model => model.Year)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Year)
-        </dd>
-
+<div>
+    <dl class="dl-horizontal-SubDetails gray-round col-md-offset-1">
         <dt>
             @Html.DisplayNameFor(model => model.MoviesGenres.FirstOrDefault().Genre)
         </dt>
+
         <dd>
             &ensp;
             @foreach (var item in Model.MoviesGenres)
@@ -46,6 +41,7 @@
                 </mydt>
             }
         </dd>
+
 
         <dt>
             @Html.DisplayNameFor(model => model.MoviesActors.FirstOrDefault().Actor)
@@ -60,13 +56,14 @@
                 </mydt>
             }
         </dd>
+
     </dl>
 </div>
 
-<p>
-    @Html.ActionLink("Tilføj Genre", "CreateGenretoMovie", new { movieID = Model.ID }, new { @class = "giveJob_btn btn btn-group col-md-offset-7" }) |
-    @Html.ActionLink("Tilføj Actor", "CreateActortoMovie", new { movieID = Model.ID }, new { @class = "giveJob_btn btn btn-group col-md-offset-8" })
-</p>
+<div class="col-md-5 col-md-offset-7">
+    @Html.ActionLink("Add Genre", "CreateGenretoMovie", new { movieID = Model.ID }, new { @class = "giveJob_btn btn btn-group" }) |
+    @Html.ActionLink("Add Actor", "CreateActortoMovie", new { movieID = Model.ID }, new { @class = "giveJob_btn btn btn-group" })
+</div>
 
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
