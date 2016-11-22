@@ -155,7 +155,7 @@ namespace MovieBasen.Controllers
                 if (movieGenreValidation == null)
                 {
                     db.SaveChanges();
-                    return RedirectToAction("Details/" + movieGenre.MovieID);
+                    return RedirectToAction("Edit/" + movieGenre.MovieID);
                 }
                 else
                 {
@@ -200,7 +200,7 @@ namespace MovieBasen.Controllers
                 if (movieActorValidation == null)
                 {
                     db.SaveChanges();
-                    return RedirectToAction("Details/" + movieActor.MovieID);
+                    return RedirectToAction("Edit/" + movieActor.MovieID);
                 }
                 else
                 {

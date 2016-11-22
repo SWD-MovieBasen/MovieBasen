@@ -61,10 +61,14 @@
     </dl>
 </div>
 
-<div class="col-lg-5 col-md-offset-7">
-    @Html.ActionLink("Add Genre", "CreateGenretoMovie", new { movieID = Model.ID }, new { @class = "giveJob_btn btn btn-group" }) |
-    @Html.ActionLink("Add Actor", "CreateActortoMovie", new { movieID = Model.ID }, new { @class = "giveJob_btn btn btn-group" })
-</div>
+@*  
+  ---- Har flyttede det til Edith Movie ----
+    <div class="col-lg-5 col-md-offset-7">
+        @Html.ActionLink("Add Genre", "CreateGenretoMovie", new { movieID = Model.ID }, new { @class = "giveJob_btn btn btn-group" }) |
+        @Html.ActionLink("Add Actor", "CreateActortoMovie", new { movieID = Model.ID }, new { @class = "giveJob_btn btn btn-group" })
+    </div>
+*@
+
 
 <div class="col-lg-12">
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |

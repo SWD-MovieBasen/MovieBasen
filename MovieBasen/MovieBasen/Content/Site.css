@@ -164,3 +164,7 @@ h5 {
         white-space: normal;
     }
 /* ----------------------- End - This is in the Profile Detail Page ---------------------------------- */
+
+.myActorAndGenreBtn{
+    top: -45px;
+}
