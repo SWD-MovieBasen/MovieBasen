@@ -36,7 +36,7 @@ namespace MovieBasenTestProject
         public void TypeMovieYearFail()
         {
             movie.Year = "19000"; //Movie year set to year 19.000
-            if (movie.Year.Length > 4) //Checks the length of the movie year (Year can't be more than 4 chars)
+            if (movie.Year.Length != 4) //Checks the length of the movie year (Year can't be more than 4 chars)
             {
                 throw new Exception("Movie year can't be more than 4 chars");
             }
