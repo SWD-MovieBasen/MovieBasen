@@ -1,6 +1,7 @@
 ﻿using MovieBasen.Helpers;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -10,10 +11,14 @@ namespace MovieBasen.Models
     {
         public int ID { get; set; }
 
+        [Required(ErrorMessage = "You must fill in a name to the movie.")]
         public String Name { get; set; }
 
+        [Required(ErrorMessage = "You must fill in the year the movie premiered")]
+        [Range(1950, 2050, ErrorMessage = "It must be between 1950 and 2017")]
         public String Year { get; set; }
 
+        [Required(ErrorMessage = "You must fill in the synopsis of the movie")]
         public String Synopsis { get; set; }
 
         public String MovieImagePath { get; set; }
