@@ -18,6 +18,7 @@ namespace MovieBasen.Controllers
         public ActionResult Index(String searchString)
         {
 
+            // Er en LINQ statement som gør at man kan søge efter film
             var movies = from m in db.Movies
                          select m;
 

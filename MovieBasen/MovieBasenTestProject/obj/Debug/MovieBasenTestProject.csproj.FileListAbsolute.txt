@@ -35,3 +35,40 @@ C:\Users\ince\Desktop\Exam Project 1. Semester\MovieBasen\MovieBasen\MovieBasenT
 C:\Users\ince\Desktop\Exam Project 1. Semester\MovieBasen\MovieBasen\MovieBasenTestProject\obj\Debug\MovieBasenTestProject.csprojResolveAssemblyReference.cache
 C:\Users\ince\Desktop\Exam Project 1. Semester\MovieBasen\MovieBasen\MovieBasenTestProject\obj\Debug\MovieBasenTestProject.dll
 C:\Users\ince\Desktop\Exam Project 1. Semester\MovieBasen\MovieBasen\MovieBasenTestProject\obj\Debug\MovieBasenTestProject.pdb
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\MovieBasenTestProject.dll
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\MovieBasenTestProject.pdb
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\MovieBasen.dll
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\Microsoft.Owin.dll
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\System.Web.Optimization.dll
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\Owin.dll
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\EntityFramework.dll
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\System.Web.Razor.dll
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\System.Web.WebPages.dll
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\MovieBasen.pdb
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\System.Web.Mvc.xml
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\Microsoft.Owin.xml
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\System.Web.Optimization.xml
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\EntityFramework.xml
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\System.Web.Razor.xml
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\System.Web.WebPages.xml
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\obj\Debug\MovieBasenTestProject.csprojResolveAssemblyReference.cache
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\obj\Debug\MovieBasenTestProject.dll
+C:\Users\Elvis\Dropbox\Software Development\1.Semester Eksamen\MovieBasen\MovieBasenTestProject\obj\Debug\MovieBasenTestProject.pdb
