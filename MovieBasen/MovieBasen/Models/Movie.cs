@@ -16,7 +16,7 @@ namespace MovieBasen.Models
 
         [Required(ErrorMessage = "You must fill in the year the movie premiered")]
         [Range(1950, 2050, ErrorMessage = "It must be between 1950 and 2017")]
-        public int Year { get; set; }
+        public String Year { get; set; }
 
         [Required(ErrorMessage = "You must fill in the synopsis of the movie")]
         public String Synopsis { get; set; }

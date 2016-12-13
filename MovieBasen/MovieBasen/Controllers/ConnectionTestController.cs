@@ -7,7 +7,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-
 namespace MovieBasen.Controllers
 {
     public class ConnectionTestController : Controller
@@ -20,13 +19,13 @@ namespace MovieBasen.Controllers
                 {
                     SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
                     connection.Open();
-                    if ((connection.State & ConnectionState.Open) == 0)
+                    if ((connection.State & ConnectionState.Open)==0)
                     {
                         Response.Write("Connection OK!");
                         connection.Close();
                     }
-                    else
-                    {
+                     else
+                     {
                         Response.Write("No Connection!");
                     }
                 }

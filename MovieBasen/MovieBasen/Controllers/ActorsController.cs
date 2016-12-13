@@ -15,6 +15,7 @@ namespace MovieBasen.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Actors
+        [Authorize(Roles="Admin")]
         public ActionResult Index()
         {
             return View(db.Actors.ToList());

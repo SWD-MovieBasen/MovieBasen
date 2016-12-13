@@ -1,14 +1,17 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MovieBasen.Models;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Collections.Generic;
 
 namespace MovieBasenTestProject
 {
     [TestClass]
     public class UnitTest1
     {
+
         Movie movie = new Movie(); //Instance of the movie class
-        Actor actor = new Actor(); //Instance of the actor class
 
         [TestMethod]
         public void TypeMovieNameFailTest() //Type empty movie name
@@ -18,6 +21,7 @@ namespace MovieBasenTestProject
             {
                 throw new Exception("Movie name can't be empty");
             }
+
         }
 
         [TestMethod]
@@ -26,62 +30,45 @@ namespace MovieBasenTestProject
             movie.Name = "Jack the Giantslayer";
             if (movie.Name == string.Empty) //Same condition as above, but passes because the movie name isn't empty
             {
-                throw new Exception("Movie name can't be empty");                
+                throw new Exception("Movie name can't be empty");
+
             }
+
         }
 
         [TestMethod]
         public void TypeMovieYearFail()
         {
-            movie.Year = 19000; //Movie year set to year 19.000
-            if (movie.Year > 2017) //Checks that the movie year isn't later than 2017)
+            movie.Year = "19000"; //Movie year set to year 19.000
+            if (movie.Year.Length != 4) //Checks the length of the movie year (Year can't be more than 4 chars)
             {
-                throw new Exception("Movie year can't be later than 2017");
+                throw new Exception("Movie year can't be more than 4 chars");
             }
         }
 
         [TestMethod]
         public void TypeMovieYearFail2()
         {
-            movie.Year = 1900; //Movie year set to year 19.000
-            if (movie.Year < 1950) //Checks that the movie year isn't earlier than 1950
-            {
-                throw new Exception("Movie year can't be earlier than 1950");
-            }
+            movie.Year = "1240";
+            StringAssert.StartsWith(movie.Year, "19"); //Movie Year has to start with 19__
+
         }
 
         [TestMethod]
-        public void ActorAgeTest()
+        public void TypeMovieYearFail3()
         {
-            actor.Age = -1;
-            if(actor.Age <= 0)
-            {
-                throw new Exception("Actor age can't be minus or under 0");
-            }
+            movie.Year = "2040";
+            StringAssert.StartsWith(movie.Year, "201"); //Movie Year has to be between 2010 and 2019!
+
         }
 
         [TestMethod]
-        public void ActorIdNotNullOrNegativeTestFail()
+        public void TypeMovieYearPass() //Test passes
         {
-            actor.ID = -1;
-            Assert.IsTrue(actor.ID > 0);   //Actor Id should always be a number over 0     
+            movie.Year = "2010";
+            StringAssert.StartsWith(movie.Year, "201"); //Movie Year has to be between 2010 and 2019!
+
         }
-
-        [TestMethod]
-        public void ActorIdNotNullOrNegativeTestPass()
-        {
-            actor.ID = 1;
-            Assert.IsFalse(actor.ID <= 0);    //Actor Id should not be equal 0 (Every actor have an actor Id)            
-        }
-
-
-
-
-
-
-
-
-
     }
 }
 

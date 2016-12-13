@@ -10,6 +10,7 @@ using MovieBasen.Models;
 
 namespace MovieBasen.Controllers
 {
+    [Authorize(Roles="Normal,Admin")]
     public class MoviesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -18,7 +19,6 @@ namespace MovieBasen.Controllers
         public ActionResult Index(String searchString)
         {
 
-            // Er en LINQ statement som gør at man kan søge efter film
             var movies = from m in db.Movies
                          select m;
 
@@ -48,6 +48,7 @@ namespace MovieBasen.Controllers
         }
 
         // GET: Movies/Create
+        [Authorize(Roles="Admin")]
         public ActionResult Create()
         {
             return View();
@@ -56,6 +57,7 @@ namespace MovieBasen.Controllers
         // POST: Movies/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles="Admin")]
         public ActionResult Create(Movie movie, HttpPostedFileBase image)
         {
             if (ModelState.IsValid)
@@ -71,6 +73,7 @@ namespace MovieBasen.Controllers
         }
 
         // GET: Movies/Edit/5
+        [Authorize(Roles="Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -88,6 +91,7 @@ namespace MovieBasen.Controllers
         // POST: Movies/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles="Admin")]
         public ActionResult Edit(Movie movie, HttpPostedFileBase image)
         {
             if (ModelState.IsValid)
@@ -103,6 +107,7 @@ namespace MovieBasen.Controllers
         }
 
         // GET: Movies/Delete/5
+        [Authorize(Roles="Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -120,6 +125,7 @@ namespace MovieBasen.Controllers
         // POST: Movies/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles="Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             Movie movie = db.Movies.Find(id);
@@ -134,6 +140,7 @@ namespace MovieBasen.Controllers
 
 
         // GET: MovieGenre/Create
+        [Authorize(Roles="Admin")]
         public ActionResult CreateGenretoMovie(int? movieID)
         {
             ViewBag.MovieID = db.Movies.Find(movieID);
@@ -144,6 +151,7 @@ namespace MovieBasen.Controllers
         // POST: MovieGenre/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles="Admin")]
         public ActionResult CreateGenretoMovie(MovieGenre movieGenre)
         {
             if (ModelState.IsValid)
@@ -179,6 +187,7 @@ namespace MovieBasen.Controllers
 
 
         // GET: MovieActor/Create
+        [Authorize(Roles="Admin")]
         public ActionResult CreateActorToMovie(int? actorID)
         {
             ViewBag.MovieID = db.Movies.Find(actorID);
@@ -189,6 +198,7 @@ namespace MovieBasen.Controllers
         // POST: MovieActor/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles="Admin")]
         public ActionResult CreateActorToMovie(MovieActor movieActor)
         {
             if (ModelState.IsValid)
